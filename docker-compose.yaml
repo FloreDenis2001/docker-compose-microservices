@@ -40,6 +40,8 @@ services:
       - "8081:8080"
       networks:
       - mynet
+      environment:
+      SPRING_PROFILES_ACTIVE: docker
 
   # clientapp:
   #   image: floredenis2001/path-pilot-client:15.07.2024.20.37.37
