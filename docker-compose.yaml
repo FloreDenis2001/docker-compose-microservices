@@ -43,22 +43,22 @@ services:
       environment:
       SPRING_PROFILES_ACTIVE: docker
 
-  # clientapp:
-  #   image: floredenis2001/path-pilot-client:15.07.2024.20.37.37
-  #   networks:
-  #     - mynet
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - path-pilot-service
-  #   environment:
-  #     - REACT_APP_ENV=prod
+  clientapp:
+    image: floredenis2001/courses-client:latest
+    networks:
+      - mynet
+    ports:
+      - "80:80"
+    depends_on:
+      - path-pilot-service
+    environment:
+      - REACT_APP_ENV=prod
   # nginx:
-  #   image: floredenis2001/path-pilot-proxy:v2
+  #   image: floredenis2001/courses-proxy:latest
   #   networks:
   #     - mynet
   #   ports:
   #     - "8080:80"
   #   depends_on:
   #     - clientapp
-  #     - path-pilot-service
+  #     - courses-auth-service
