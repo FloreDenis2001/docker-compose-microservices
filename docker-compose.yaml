@@ -35,7 +35,7 @@ services:
       - mysql
 
     gateway:
-      image: floredenis2001/courses-gateway:26.08.2024.15.51.15
+      image: floredenis2001/courses-gateway:26.08.2024.16.10.21
       ports: 
       - "8081:8080"
       networks:
