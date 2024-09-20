@@ -44,7 +44,7 @@ services:
     depends_on:
       - mysql
   gateway:
-      image: floredenis2001/courses-gateway:latest
+      image: floredenis2001/courses-gateway:20.09.2024.19.37.21
       ports:
       - "8081:8082"
       networks:
