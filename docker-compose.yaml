@@ -33,32 +33,21 @@ services:
       - "8081:8080"
     depends_on:
       - mysql
-
-    gateway:
+  courses-microservice:
+    image: floredenis2001/courses-microservice:latest
+    networks:
+      - mynet
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql
+  gateway:
       image: floredenis2001/courses-gateway:07.08.2024.13.23.18
-      ports: 
-      - "8081:8080"
+      ports:
+      - "8081:8082"
       networks:
       - mynet
       environment:
-      SPRING_PROFILES_ACTIVE: docker
-
-  clientapp:
-    image: floredenis2001/courses-client:latest
-    networks:
-      - mynet
-    ports:
-      - "80:80"
-    depends_on:
-      - path-pilot-service
-    environment:
-      - REACT_APP_ENV=prod
-  # nginx:
-  #   image: floredenis2001/courses-proxy:latest
-  #   networks:
-  #     - mynet
-  #   ports:
-  #     - "8080:80"
-  #   depends_on:
-  #     - clientapp
-  #     - courses-auth-service
+         SPRING_PROFILES_ACTIVE: docker
