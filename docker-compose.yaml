@@ -30,7 +30,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker
     ports:
-      - "8081:8080"
+      - "8080:8080"
     depends_on:
       - mysql
   courses-microservice:
@@ -46,7 +46,7 @@ services:
   gateway:
       image: floredenis2001/courses-gateway:20.09.2024.19.37.21
       ports:
-      - "8081:8082"
+      - "8081:8081"
       networks:
       - mynet
       environment:
