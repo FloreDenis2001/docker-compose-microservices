@@ -34,7 +34,7 @@ services:
     depends_on:
       - mysql
   courses-microservice:
-    image: floredenis2001/courses-microservice:23.09.2024.18.39.27
+    image: floredenis2001/courses-microservice:23.09.2024.19.26.06
     networks:
       - mynet
     environment:
