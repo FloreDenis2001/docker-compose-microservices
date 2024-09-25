@@ -30,7 +30,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker
     ports:
-      - "8080:8080"
+      - "8083:8083"
     depends_on:
       - mysql
   courses-microservice:
