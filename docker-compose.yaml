@@ -35,7 +35,7 @@ services:
       - mysql
       - zipkin
   courses-microservice:
-    image: floredenis2001/courses-microservice:02.10.2024.18.37.50
+    image: floredenis2001/courses-microservice:02.10.2024.18.49.21
     networks:
       - mynet
     environment:
