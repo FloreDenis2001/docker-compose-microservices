@@ -51,15 +51,15 @@ services:
       - mysql
       - zipkin
   gateway:
-      image: floredenis2001/courses-gateway:02.10.2024.19.04.06
-      ports:
+    image: floredenis2001/courses-gateway:02.10.2024.19.04.06
+    ports:
       - "8081:8081"
-      networks:
+    networks:
       - mynet
-      environment:
-         SPRING_PROFILES_ACTIVE: docker
-      depends_on:
-        - zipkin
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      - zipkin
   zipkin:
     image: openzipkin/zipkin
     container_name: zipkin
