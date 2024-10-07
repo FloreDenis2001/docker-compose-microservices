@@ -29,7 +29,7 @@ services:
       timeout: 20s
       retries: 1
   courses-auth-service:
-    image: floredenis2001/courses-auth-service:07.10.2024.19.11.05
+    image: floredenis2001/courses-auth-service:07.10.2024.19.29.48
     networks:
       - mynet
     environment:
