@@ -51,7 +51,7 @@ services:
       - mysql
       - zipkin
   gateway:
-    image: floredenis2001/courses-gateway:07.10.2024.19.41.03
+    image: floredenis2001/courses-gateway:16.10.2024.18.03.54
     ports:
       - "8081:8081"
     networks:
