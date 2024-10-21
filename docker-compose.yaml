@@ -182,7 +182,9 @@ services:
             scrape_interval: 5s
             static_configs:
               - targets:
-                  - 'kibana-deploy-template:8080'
+                  - 'courses-auth-service:8083'
+                  - 'courses-microservice:8082'
+                  - 'gateway:8081'
     entrypoint:
       - /bin/sh
       - -c
