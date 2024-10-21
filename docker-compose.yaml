@@ -7,6 +7,10 @@ volumes:
   kibana_data:
   es_data:
   logstash_pipeline:
+  prometheus_data:
+  grafana_data:
+  grafana_provisioning:
+      driver: local
 
 x-variables:
   elastic_password: &elastic_password 'parola'
