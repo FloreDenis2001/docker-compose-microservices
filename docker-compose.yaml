@@ -43,6 +43,7 @@ services:
     depends_on:
       - mysql
       - zipkin
+      - logstash
   courses-microservice:
     image: floredenis2001/courses-microservice:21.10.2024.19.01.23
     networks:
@@ -54,6 +55,7 @@ services:
     depends_on:
       - mysql
       - zipkin
+      - logstash
   gateway:
     image: floredenis2001/courses-gateway:21.10.2024.19.03.47
     ports:
@@ -63,7 +65,9 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
+      - mysql
       - zipkin
+      - logstash
   zipkin:
     image: openzipkin/zipkin
     container_name: zipkin
