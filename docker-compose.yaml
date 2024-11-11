@@ -57,7 +57,7 @@ services:
       - zipkin
       - logstash
   gateway:
-    image: floredenis2001/courses-gateway:21.10.2024.19.03.47
+    image: floredenis2001/courses-gateway:11.11.2024.22.15.16
     ports:
       - "8081:8081"
     networks:
