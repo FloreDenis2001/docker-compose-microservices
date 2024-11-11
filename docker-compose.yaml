@@ -69,7 +69,7 @@ services:
       - zipkin
       - logstash
   client:
-    image: floredenis2001/courses-client:latest
+    image: floredenis2001/courses-client:11.11.2024.22.10.27
     environment:
       REACT_APP_ENV: production
     ports:
