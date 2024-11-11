@@ -68,6 +68,18 @@ services:
       - mysql
       - zipkin
       - logstash
+  client:
+    image: floredenis2001/courses-client:latest
+    environment:
+      REACT_APP_ENV: production
+    ports:
+      - "3000:3000"
+    networks:
+      - mynet
+    depends_on:
+      - gateway
+      - courses-auth-service
+      - courses-microservice
   zipkin:
     image: openzipkin/zipkin
     container_name: zipkin
